@@ -1,0 +1,9 @@
+.classpath
+.project
+target/
+bin/
+.settings/
+.idea/
+*.iml
+.swagger-codegen/
+.openapi-generator/
