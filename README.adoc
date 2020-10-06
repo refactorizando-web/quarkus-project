@@ -1,0 +1,28 @@
+= Quarkus first Steps =
+
+This projects has bornt with the idea of show the basics features and characteristics of Quarkus framework.
+
+If you want more information about the project and Quarkus you can go to: https://refactorizando.com/primeros-pasos-con-quarkus/
+
+== How to run it? ==
+
+
+mvn compile quarkus:dev
+
+
+**Create an image native and executable:**
+
+```
+mvn package -Pnative
+mvn package -Pnative -Dnative-image.docker-build=true
+```
+
+**Create docker image:**
+```
+docker build -f src/main/docker/Dockerfile.native -t quarkus/quarkus-project .
+```
+
+**Run it:**
+```
+docker run -i --rm -p 8080:8080 quarkus/quarkus-project
+```
